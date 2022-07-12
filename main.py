@@ -287,7 +287,7 @@ elif Menubar == 'Producción de chips secos de yuca':
 
 	st.write('**Nota**: *La utilidad bruta* de una empresa es la ganancia que se obtiene de la venta de un producto luego de restarle los costos asociados a su producción. Por otra parte, a fin de determinar la *utilidad neta* es necesario considerar otros costos fijos, operativos y de inversión.')
 
-st.markdown('*Agradecimientos por suministrar información y orientación: Shirley Perez (AGROSAVIA), Angela Vasquez (AGROSAVIA), Juan Carlos Martinez (Agrosavia), Alberto Garcia (CLAYUCA), Bernardo Ospina (CLAYUCA)*')
+st.markdown('**Agradecimientos por suministrar información y orientación: Shirley Perez (AGROSAVIA), Angela Vasquez (AGROSAVIA), Juan Carlos Martinez (Agrosavia), Alberto Garcia (CLAYUCA), Bernardo Ospina (CLAYUCA)**')
 st.markdown('*Copyright (C) 2022 AGROSAVIA, CIRAD & CIAT*')
 st.markdown('**Autores: Luis Alejandro Taborda Andrade (latabordaa@unal.edu.co), Katia Contreras (kcontreras@agrosavia.co), Thierry Tran (thierry.tran@cirad.fr)**')
 
