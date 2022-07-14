@@ -49,7 +49,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	ma = st.select_slider('Aplicaciones: fertilización, aplicaciones de Control, otras...(en miles de pesos $)', options=my_range6, value=510)
 
 	my_range7 = range(0,901)
-	mc = st.select_slider('Cosecha (en miles de pesos $)', options=my_range7, value=600)
+	mc = st.select_slider('Cosecha (en miles de pesos $)', options=my_range7, value=800)
 
 	#Costos totales producción por hectárea
 
