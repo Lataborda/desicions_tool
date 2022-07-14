@@ -24,31 +24,31 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	st.subheader('***Gastos generales por hectárea:***')
 
 	#insumos y costos generales
-	my_range1 = range(0,951)
+	my_range1 = range(0,1301)
 
 	Alq = st.select_slider('Alquiler de una (1) hectárea "civilizada" o "sin civilizar" (en miles de pesos $)', options=my_range1, value=750)
 
-	my_range2 = range(0,651)
+	my_range2 = range(0,951)
 
 	Ara = st.select_slider('Preparación de la tierra: Costos de arado, pase de rastra, caballoneo, u otro si aplica (en miles de pesos $)', options=my_range2, value=450)
 
 	my_range3 = range(0,501)
-	Sem = st.select_slider('Semilla de yuca industrial para una hectárea, (en miles de pesos $)', options=my_range3, value=80)
+	Sem = st.select_slider('Semilla de yuca industrial para una hectárea, (en miles de pesos $)', options=my_range3, value=350)
 
-	my_range4 = range(0,701)
-	Ins = st.select_slider('Insumos (fertilizantes, biocontroladores, plaguicidas, otros), (en miles de pesos $)', options=my_range4, value=450)
+	my_range4 = range(0,1201)
+	Ins = st.select_slider('Insumos (fertilizantes, biocontroladores, plaguicidas, otros), (en miles de pesos $)', options=my_range4, value=650)
 
 	#Mano de obra
 
 	st.subheader('***Mano de obra (costos por hectárea):***')
 	
-	my_range5 = range(0,801)
-	ms = st.select_slider('Siembra (en miles de pesos $)', options=my_range5, value=400)
+	my_range5 = range(0,901)
+	ms = st.select_slider('Siembra (en miles de pesos $)', options=my_range5, value=340)
 
-	my_range6 = range(0,801)
-	ma = st.select_slider('Aplicaciones: fertilización, aplicaciones de Control, otras...(en miles de pesos $)', options=my_range6, value=350)
+	my_range6 = range(0,901)
+	ma = st.select_slider('Aplicaciones: fertilización, aplicaciones de Control, otras...(en miles de pesos $)', options=my_range6, value=510)
 
-	my_range7 = range(0,801)
+	my_range7 = range(0,901)
 	mc = st.select_slider('Cosecha (en miles de pesos $)', options=my_range7, value=600)
 
 	#Costos totales producción por hectárea
