@@ -26,7 +26,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	#insumos y costos generales
 	my_range1 = range(0,1301)
 
-	Alq = st.number_input('Alquiler de una (1) hectárea "civilizada" o "sin civilizar" (en miles de pesos $)',900000,'$%f')
+	Alq = st.number_input('Alquiler de una (1) hectárea "civilizada" o "sin civilizar" (en miles de pesos $)',0,900000)
 
 	my_range2 = range(0,951)
 
