@@ -53,46 +53,45 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	# Rendimiento en Ton/ha
 	st.markdown('***Por favor indique la cantidad promedio de toneladas de yuca cosechadas por hectárea:***')
 
-	my_range8 = range(5,35)
+	my_range8 = range(5,36)
 	re = st.select_slider('Rendimiento de cosecha (ton/ha):', options=my_range8, value=17)
 
 	CPT = int(Tot)/ int(re)
 
 	st.subheader('**Costos totales de producción por tonelada:**')
-	st.error(f"**Costos totales por tonelada de yuca: ${round(CPT,1)}**")
+	st.info(f"**Costos totales por tonelada de yuca: ${CPT:,}**")
 
 	#transporte 
 	st.subheader('***Costos de transporte por tonelada de yuca:***')
 
-	my_range9 = range(0,201)
-	tp = st.select_slider('Costos de transporte de 1 tonelada de raíces frescas (puesta en planta), (en miles de pesos $):', options=my_range9, value=80)
+	
+	tp = st.number_input('Costos de transporte de 1 tonelada de raíces frescas (puesta en planta), ($):', 0,5000000)
 
-	my_range10 = range(0,41)
-	ot = st.select_slider('Otros costos por transporte de racies (transporte desde el cultivo hasta el camion, cargue, descargue, empaque, otros) por tonelada de yuca (en miles de pesos $):', options=my_range10, value=10)
+	
+	ot = st.number_input('Otros costos por transporte de racies (transporte desde el cultivo hasta el camion, cargue, descargue, empaque, otros) por tonelada de yuca (en miles de pesos $):', 0,5000000)
 
-	tt= (int(tp) + int(ot))*1000
-	st.error(f"**Costos totales de transporte por tonelada de yuca: ${round(tt,1)}**")
+	
+	st.info(f"**Costos totales de transporte por tonelada de yuca: ${tt:,}**")
 
 	#transporte + producción
 
 	st.subheader('**Costos totales de producción + costos de transporte por tonelada de yuca:**')
 	tc = int(tt) + int(CPT)
 
-	st.error(f"**Costos totales de producción + transporte de raices de yuca: ${round(tc,1)}**")
+	st.info(f"**Costos totales de producción + transporte de raices de yuca: ${tc:,}**")
 
 	#precio de venta 
 	st.subheader('Por favor indique el precio de venta (referencia) de raices por tonelada:')
 
-	my_range11 = range(100,701)
-	pr = st.select_slider('Precio de venta de racies/Ton (en miles de pesos $):', options=my_range11, value=450)
+	pr = st.number_input('Precio de venta de racies/Ton ($):', 0,3000000)
 
 	#rentabilidad bruta
 
-	rb = (int(pr)*1000) - int(tc)
-	st.success(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${round(rb,1)}**")
+	rb = (int(pr)) - int(tc)
+	st.success(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${rb:,)}**")
 
 	rbh= int(rb)* int(re)
-	st.success(f"**Rentabilidad bruta total por hectárea: ${round(rbh,1)}**")
+	st.success(f"**Rentabilidad bruta total por hectárea: ${rbh:,)}**")
 
 	st.write('**Nota**: *La utilidad bruta* de una empresa es la ganancia que se obtiene de la venta de un producto luego de restarle los costos asociados a su producción. Por otra parte, a fin de determinar la *utilidad neta* es necesario considerar otros costos fijos, operativos y de inversión.')
 
