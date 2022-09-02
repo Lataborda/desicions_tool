@@ -78,7 +78,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	st.subheader('**Costos totales de producción + costos de transporte por tonelada de yuca:**')
 	tc = int(tt) + int(CPT)
 
-	st.info(f"**Costos totales de producción + transporte de raices de yuca: ${tc:,}**")
+	st.info(f"**Costos totales de producción + transporte de raices de yuca: ${round(tc:,),1}**")
 
 	#precio de venta 
 	st.subheader('Por favor indique el precio de venta (referencia) de raices por tonelada:')
