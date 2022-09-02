@@ -88,7 +88,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	#rentabilidad bruta
 
 	rb = (int(pr)) - int(tc)
-	st.success(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${rb:,)}**")
+	st.success(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${rb:,}**")
 
 	rbh= int(rb)* int(re)
 	st.success(f"**Rentabilidad bruta total por hectárea: ${rbh:,)}**")
