@@ -31,28 +31,24 @@ if Menubar == 'Producción de raíces frescas de yuca':
 
 	Sem = st.number_input('Semilla de yuca industrial para una hectárea, ($)', 0,5000000)
 
-	my_range4 = range(0,1201)
 	Ins = st.number_input('Insumos (fertilizantes, biocontroladores, plaguicidas, otros), ($)', 0,5000000)
 
 	#Mano de obra
 
 	st.subheader('***Mano de obra (costos por hectárea):***')
 	
-	my_range5 = range(0,901)
-	ms = st.select_slider('Siembra (en miles de pesos $)', options=my_range5, value=340)
+	ms = st.number_input('Siembra ($)', 0,5000000)
 
-	my_range6 = range(0,901)
-	ma = st.select_slider('Aplicaciones: fertilización, aplicaciones de Control, otras...(en miles de pesos $)', options=my_range6, value=510)
+	ma = st.number_input('Aplicaciones: fertilización, aplicaciones de Control, otras...($)', 0,5000000)
 
-	my_range7 = range(0,901)
-	mc = st.select_slider('Cosecha (en miles de pesos $)', options=my_range7, value=800)
+	mc = st.number_input('Cosecha ($)', 0,5000000)
 
 	#Costos totales producción por hectárea
 
 	st.subheader('**Costos totales de producción por hectárea:**')
-	Tot= (Alq + Ara + Sem + Ins + ms + ma + mc)*1000
+	Tot= (Alq + Ara + Sem + Ins + ms + ma + mc)
 
-	st.error(f"**Costos totales por hectárea: ${Tot:,}")
+	st.info(f"**Costos totales por hectárea: ${Tot:,}")
 
 	# Rendimiento en Ton/ha
 	st.markdown('***Por favor indique la cantidad promedio de toneladas de yuca cosechadas por hectárea:***')
