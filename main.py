@@ -88,6 +88,8 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	#rentabilidad bruta
 
 	rb = (int(pr)) - int(tc)
+	rbh= int(rb)* int(re)
+	
 	if float(rbh)<1000000:
 		st.error(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${rb:,}**")
 
@@ -97,8 +99,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	elif float(rbh)>= 1500001:
 		st.success(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${rb:,}**")
 
-
-	rbh= int(rb)* int(re)
+	
 	if float(rbh)<1000000:
 		st.error(f"**Rentabilidad bruta total por hectárea: ${rbh:,}**")
 
