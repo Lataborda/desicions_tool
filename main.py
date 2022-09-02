@@ -24,19 +24,15 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	st.subheader('***Gastos generales por hectárea:***')
 
 	#insumos y costos generales
-	my_range1 = range(0,1301)
+	
+	Alq = st.number_input('Alquiler de una (1) hectárea "civilizada" o "sin civilizar" ($)',0,5000000)
 
-	Alq = st.number_input('Alquiler de una (1) hectárea "civilizada" o "sin civilizar" (en miles de pesos $)',0,900000)
+	Ara = st.number_input('Preparación de la tierra: Costos de arado, pase de rastra, caballoneo, u otro si aplica ($)', 0,5000000)
 
-	my_range2 = range(0,951)
-
-	Ara = st.select_slider('Preparación de la tierra: Costos de arado, pase de rastra, caballoneo, u otro si aplica (en miles de pesos $)', options=my_range2, value=450)
-
-	my_range3 = range(0,501)
-	Sem = st.select_slider('Semilla de yuca industrial para una hectárea, (en miles de pesos $)', options=my_range3, value=350)
+	Sem = st.number_input('Semilla de yuca industrial para una hectárea, ($)', 0,5000000)
 
 	my_range4 = range(0,1201)
-	Ins = st.select_slider('Insumos (fertilizantes, biocontroladores, plaguicidas, otros), (en miles de pesos $)', options=my_range4, value=650)
+	Ins = st.number_input('Insumos (fertilizantes, biocontroladores, plaguicidas, otros), ($)', 0,5000000)
 
 	#Mano de obra
 
