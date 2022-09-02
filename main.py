@@ -48,7 +48,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	st.subheader('**Costos totales de producción por hectárea:**')
 	Tot= (Alq + Ara + Sem + Ins + ms + ma + mc)
 
-	st.progress(f"**Costos totales por hectárea: ${Tot:,}**")
+	st.info(f"**Costos totales por hectárea: ${Tot:,}**")
 
 	# Rendimiento en Ton/ha
 	st.markdown('***Por favor indique la cantidad promedio de toneladas de yuca cosechadas por hectárea:***')
