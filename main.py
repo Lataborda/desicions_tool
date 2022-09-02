@@ -91,7 +91,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	st.success(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${rb:,}**")
 
 	rbh= int(rb)* int(re)
-	st.success(f"**Rentabilidad bruta total por hectárea: ${rbh:,)}**")
+	st.success(f"**Rentabilidad bruta total por hectárea: ${rbh:,}**")
 
 	st.write('**Nota**: *La utilidad bruta* de una empresa es la ganancia que se obtiene de la venta de un producto luego de restarle los costos asociados a su producción. Por otra parte, a fin de determinar la *utilidad neta* es necesario considerar otros costos fijos, operativos y de inversión.')
 
