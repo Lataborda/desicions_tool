@@ -59,7 +59,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	CPT = int(Tot)/ int(re)
 
 	st.subheader('**Costos totales de producción por tonelada:**')
-	st.info(f"**Costos totales por tonelada de yuca: ${CPT:,}**")
+	st.info(f"**Costos totales por tonelada de yuca: ${round(CPT,1)}**")
 
 	#transporte 
 	st.subheader('***Costos de transporte por tonelada de yuca:***')
@@ -71,7 +71,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	ot = st.number_input('Otros costos por transporte de racies (transporte desde el cultivo hasta el camion, cargue, descargue, empaque, otros) por tonelada de yuca (en miles de pesos $):', 0,5000000)
 
 	tt= (int(tp) + int(ot))
-	st.info(f"**Costos totales de transporte por tonelada de yuca: ${round(tt,1)}**")
+	st.info(f"**Costos totales de transporte por tonelada de yuca: ${tt:,}**")
 
 	#transporte + producción
 
