@@ -125,6 +125,8 @@ elif Menubar == 'Producción de chips secos de yuca':
 	
 	thp = st.number_input('Costos de transporte de una (1) tonelada de chips secos hasta la industria ($):', 0,5000000)
 	
+	#costos totales de producir una tonelada de chips secos 
+	
 	ctch= (int(cry) * float(ratio)) + (int(tpr) * float(ratio)) + int(cs) + int (thp)
 
 	st.info(f"**Costos totales de producción y transporte de una (1) tonelada chips secos de yuca: ${ctch:,}**")
@@ -137,13 +139,13 @@ elif Menubar == 'Producción de chips secos de yuca':
 	
 	rch = (int(pch)) - int(ctch)
 	
-	if float(rch)<(int(cry)*float(ratio)):
+	if float(rch)<(int(ctch)*1.1):
 		st.error(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
 
-	elif (int(cry)*float(ratio)) <= float(rch) <= ((int(cry)*float(ratio))*1.15):
+	elif (int(ctch)*1.1) <= float(rch) <= (int(ctch)*1.1499):
 		st.warning(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
 
-	elif float(rch)>= ((int(cry)*float(ratio))*1.15):
+	elif float(rch)>= (int(ctch)*1.15):
 		st.success(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
 
 	
