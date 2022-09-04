@@ -127,7 +127,7 @@ elif Menubar == 'Producción de chips secos de yuca':
 	
 	thp = st.number_input('Costos de transporte de una (1) tonelada de chips secos hasta la industria ($):', 0,5000000)
 	
-	ctch= ((int(cry) * int(rat)) + (int(tpr) * int(rat)) + int(cs) + int (thp)
+	ctch= (int(cry) * int(rat)) + (int(tpr) * int(rat)) + int(cs) + int (thp)
 
 	st.ratio(f"**Costos totales de producción y transporte de una (1) tonelada chips secos de yuca: ${ctch:,}**")
 
