@@ -132,6 +132,21 @@ elif Menubar == 'Producción de chips secos de yuca':
 	st.subheader('Por favor indique el precio de venta (referencia) de una (1) tonelada de chips secos de yuca:')
 
 	pch = st.number_input('Precio de venta de una (1) tonelada de chips secos de yuca ($):', 0,3000000)
+	
+	#rentabilidad bruta chips
+	
+	rch = (int(pch)) - int(ctch)
+	
+	if float(rch)<(int(cry)*float(ratio)):
+		st.error(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
+
+	elif (int(cry)*float(ratio)) <= float(rch) <= ((int(cry)*float(ratio))*1.15):
+		st.warning(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
+
+	elif float(rch)>= ((int(cry)*float(ratio))*1.15):
+		st.success(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
+
+	
 
 	st.write('**Nota**: *La utilidad bruta* de una empresa es la ganancia que se obtiene de la venta de un producto luego de restarle los costos asociados a su producción. Por otra parte, a fin de determinar la *utilidad neta* es necesario considerar otros costos fijos, operativos y de inversión.')
 	
