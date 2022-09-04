@@ -131,7 +131,6 @@ elif Menubar == 'Producción de chips secos de yuca':
 
 	st.ratio(f"**Costos totales de producción y transporte de una (1) tonelada chips secos de yuca: ${ctch:,}**")
 
-	#precio de venta chips secos 
 	st.subheader('Por favor indique el precio de venta (referencia) de una (1) tonelada de chips secos de yuca:')
 
 	pch = st.number_input('Precio de venta de una (1) tonelada de chips secos de yuca ($):', 0,3000000)
