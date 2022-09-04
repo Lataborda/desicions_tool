@@ -121,7 +121,7 @@ elif Menubar == 'Producción de chips secos de yuca':
 	tpr = st.number_input('Costos de transporte de una (1) tonelada de raices frescas hasta el patio de secado ($):', 0,5000000)
 	
 	my_range9 = range(1,7)
-	rat = st.select_slider('Cantidad de toneladas de racies frescas para obtener una (1) tonelada de chips secos:', options=my_range9, value=2,5)
+	rat = st.select_slider('Cantidad de toneladas de racies frescas para obtener una (1) tonelada de chips secos:', options=my_range9, value=2.5)
 	
 	cs = st.number_input('Costos de secado (mano de obra y energía) de una (1) tonelada de chips secos de yuca ($):', 0,5000000)
 	
