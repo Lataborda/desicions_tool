@@ -139,13 +139,13 @@ elif Menubar == 'Producción de chips secos de yuca':
 	
 	rch = (int(pch)) - int(ctch)
 	
-	if (1-(float(ctch)/int(pch))) < 0.1:
+	if (1-(float(ctch)/float(pch))) < 0.1:
 		st.error(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
 
-	elif 0.1 <= (1-(float(ctch)/int(pch))) <= 0.15:
+	elif 0.1 <= (1-(float(ctch)/float(pch))) <= 0.15:
 		st.warning(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
 
-	elif (1-(float(ctch)/int(pch))) >= 0.16:
+	elif (1-(float(ctch)/float(pch))) >= 0.16:
 		st.success(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
 
 	
