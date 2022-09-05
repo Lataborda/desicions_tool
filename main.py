@@ -139,13 +139,13 @@ elif Menubar == 'Producción de chips secos de yuca':
 	
 	rch = (int(pch)) - int(ctch)
 	
-	if float(rch)<(int(ctch)*1.1):
+	if (100 - ((float(ctch)/float(pch))*100)) < 10:
 		st.error(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
 
-	elif (int(ctch)*1.1) <= float(rch) <= (int(ctch)*1.1499):
+	elif 10 <= (100 - ((float(ctch)/float(pch))* 100)) <= 15:
 		st.warning(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
 
-	elif float(rch)>= (int(ctch)*1.15):
+	elif (100 - ((float(ctch)/float(pch))* 100))>= 16:
 		st.success(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
 
 	st.write('**Nota**: *La utilidad bruta* de una empresa es la ganancia que se obtiene de la venta de un producto luego de restarle los costos asociados a su producción. Por otra parte, a fin de determinar la *utilidad neta* es necesario considerar otros costos fijos, operativos y de inversión.')
