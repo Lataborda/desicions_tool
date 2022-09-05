@@ -137,8 +137,8 @@ elif Menubar == 'Producción de chips secos de yuca':
 	
 	#rentabilidad bruta chips
 	
-	rch = (int(pch)) - int(ctch)
-	cx = float(ctch)/float(pch
+	rch = int(pch) - int(ctch)
+	cx = float(ctch)/float(pch)
 	
 	if float (cx) => 0.9:
 		st.error(f"**Rentabilidad bruta en la venta de una tonelada de chips secos: ${rch:,}**")
