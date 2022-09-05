@@ -68,7 +68,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	tp = st.number_input('Costos de transporte de 1 tonelada de raíces frescas (puesta en planta), ($):', 0,5000000)
 
 	
-	ot = st.number_input('Otros costos por transporte de racies (transporte desde el cultivo hasta el camion, cargue, descargue, empaque, otros) por tonelada de yuca (en miles de pesos $):', 0,5000000)
+	ot = st.number_input('Otros costos por transporte de racies (transporte desde el cultivo hasta el camión, cargue, descargue, empaque, otros) por tonelada de yuca (en miles de pesos $):', 0,5000000)
 
 	tt= (int(tp) + int(ot))
 	st.info(f"**Costos totales de transporte por tonelada de yuca: ${tt:,}**")
@@ -81,7 +81,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 	st.info(f"**Costos totales de producción + transporte de raices de yuca: ${tc:,}**")
 
 	#precio de venta 
-	st.subheader('Por favor indique el precio de venta (referencia) de raices por tonelada:')
+	st.subheader('Por favor indique el precio de venta (referencia) de raíces por tonelada:')
 
 	pr = st.number_input('Precio de venta de racies/Ton ($):', 0,3000000)
 
@@ -94,10 +94,10 @@ if Menubar == 'Producción de raíces frescas de yuca':
 		st.error(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${rb:,}**")
 
 	elif 1000000.01 <= float(rbh) <= 1500000:
-		st.warning(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${rb:,}**")
+		st.warning(f"**Rentabilidad bruta en la venta de una tonelada de raíces frescas: ${rb:,}**")
 
 	elif float(rbh)>= 1500001:
-		st.success(f"**Rentabilidad bruta en la venta de una tonelada de raices frescas: ${rb:,}**")
+		st.success(f"**Rentabilidad bruta en la venta de una tonelada de raíces frescas: ${rb:,}**")
 
 	
 	if float(rbh)<1000000:
@@ -116,9 +116,9 @@ elif Menubar == 'Producción de chips secos de yuca':
 
 	st.subheader('Por favor indique los costos de producción para cada una de las siguientes categorías de gastos generales:')
 	
-	cry = st.number_input('Costos de producción (o compra) de una (1) tonelada de racies frescas ($)',0,5000000)
+	cry = st.number_input('Costos de producción (o compra) de una (1) tonelada de raíces frescas ($)',0,5000000)
 	
-	tpr = st.number_input('Costos de transporte de una (1) tonelada de raices frescas hasta el patio de secado ($):', 0,5000000)
+	tpr = st.number_input('Costos de transporte de una (1) tonelada de raíces frescas hasta el patio de secado ($):', 0,5000000)
 	
 	ratio = st.slider('Cantidad de toneladas de racies frescas para obtener una (1) tonelada de chips secos:', min_value=1.8, max_value=6.6, value=2.5, step=0.1)
 	cs = st.number_input('Costos de secado (mano de obra y energía) de una (1) tonelada de chips secos de yuca ($):', 0,5000000)
