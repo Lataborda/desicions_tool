@@ -25,25 +25,25 @@ if Menubar == 'Producción de raíces frescas de yuca':
 
 	#insumos y costos generales
 	
-	Alq = st.number_input('Alquiler de una (1) hectárea "civilizada" o "sin civilizar" ($)',0,5000000)
+	Alq = st.number_input('Alquiler de una (1) hectárea "civilizada" o "sin civilizar" ($):',0,5000000)
 
-	Ara = st.number_input('Preparación de la tierra: Costos de arado, pase de rastra, caballoneo, u otro si aplica ($)', 0,5000000)
+	Ara = st.number_input('Preparación de la tierra: Costos de arado, pase de rastra, caballoneo, u otro si aplica ($):', 0,5000000)
 
-	Sem = st.number_input('Semilla de yuca industrial para una hectárea, ($)', 0,5000000)
+	Sem = st.number_input('Semilla de yuca industrial para una hectárea, ($):', 0,5000000)
 
-	Ins = st.number_input('Insumos (fertilizantes, biocontroladores, plaguicidas, otros), ($)', 0,5000000)
+	Ins = st.number_input('Insumos (fertilizantes, biocontroladores, plaguicidas, otros), ($):', 0,5000000)
 
 	#Mano de obra
 
 	st.subheader('***Mano de obra (costos por hectárea):***')
 	
-	cj = st.number_input('Costo de un jornal($)', 0,200000)
+	cj = st.number_input('Costo de un jornal ($):', 0,200000)
 
-	js = st.number_input('Cantidad de jornales para la siembra', 0,200)
+	js = st.number_input('Cantidad de jornales para la siembra:', 0,200)
 
-	jo = st.number_input('Cantidad de jornales para las aplicaciones y otras labores de campo', 0,200)
+	jo = st.number_input('Cantidad de jornales para las aplicaciones y otras labores de campo:', 0,200)
 	
-	jc = st.number_input('Cantidad de jornales para la cosecha', 0,200)
+	jc = st.number_input('Cantidad de jornales para la cosecha:', 0,200)
 
 	#Costos totales producción por hectárea
 
