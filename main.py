@@ -37,16 +37,18 @@ if Menubar == 'Producción de raíces frescas de yuca':
 
 	st.subheader('***Mano de obra (costos por hectárea):***')
 	
-	ms = st.number_input('Siembra ($)', 0,5000000)
+	cj = st.number_input('Costo de un jornal($)', 0,200000)
 
-	ma = st.number_input('Aplicaciones: fertilización, aplicaciones de Control, otras...($)', 0,5000000)
+	js = st.number_input('Cantidad de jornales para la siembra', 0,200)
 
-	mc = st.number_input('Cosecha ($)', 0,5000000)
+	jo = st.number_input('Cantidad de jornales para las aplicaciones y otras labores de campo', 0,200)
+	
+	jc st.number_input('Cantidad de jornales para la cosecha', 0,200)
 
 	#Costos totales producción por hectárea
 
 	st.subheader('**Costos totales de producción por hectárea:**')
-	Tot= (Alq + Ara + Sem + Ins + ms + ma + mc)
+	Tot= (Alq + Ara + Sem + Ins + (cj * js) + (cj * jo) + (cj * jc))
 
 	st.info(f"**Costos totales por hectárea: ${Tot:,}**")
 
