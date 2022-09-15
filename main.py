@@ -43,7 +43,7 @@ if Menubar == 'Producción de raíces frescas de yuca':
 
 	jo = st.number_input('Cantidad de jornales para las aplicaciones y otras labores de campo', 0,200)
 	
-	jc st.number_input('Cantidad de jornales para la cosecha', 0,200)
+	jc = st.number_input('Cantidad de jornales para la cosecha', 0,200)
 
 	#Costos totales producción por hectárea
 
